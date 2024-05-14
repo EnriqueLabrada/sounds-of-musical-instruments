@@ -125,7 +125,7 @@ function Flauta () {
 
 
     return(
-        <div className='container d-flex panel'onKeyDown={keySound} tabIndex={0}>
+        <div className='container d-flex panel shadow-lg'onKeyDown={keySound} tabIndex={0}>
             <div className='buttons-sound container d-flex'>
                 <div className='filas'>
                     <button className='btn btn-primary' onClick={sound1}>Q</button>
