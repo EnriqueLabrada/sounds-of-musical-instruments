@@ -1,0 +1,73 @@
+.panel{
+    height: 20rem;
+    width: 60%;
+    border: solid 4px rgb(201, 184, 184);
+}
+
+.btn{
+    width: 50%;
+    height: 23%;
+    margin: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+.controles{
+    flex-direction: column;
+    margin-top: 10%;
+    align-items: center;
+    justify-content: center;
+    border-left: solid 4px rgb(201, 184, 184);
+    border-top: solid 4px rgb(201, 184, 184);
+    margin-bottom: 2%;
+}
+
+.volumen{
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+}
+
+.buttons-sound{
+    flex-direction: column;
+}
+
+.filas{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 80%;
+}
+
+.filas .btn{
+    height: 80%;
+}
+
+@media (max-width:950px) {
+    .panel{
+        flex-direction: column;
+    }
+
+    .controles{
+        border: none;
+        margin-top:-5px;
+    }
+
+    .filas{
+        align-items: center;
+        justify-content: center;
+        margin-left: 20px;
+    }
+
+    .filas .btn{
+        width: 150%;
+        height: 70%;
+    }
+
+    .volumen{
+        font-size: 30px;
+    }
+}

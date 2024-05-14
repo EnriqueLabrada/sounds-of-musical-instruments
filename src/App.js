@@ -1,23 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import Guitarra from './components/Guitarra'
+import Piano from './components/Piano'
+import Flauta from './components/Flauta'
+import { useState } from 'react'
 
 function App() {
+
+  const[instrumento, setInstrumento] = useState(<Guitarra></Guitarra>)
+
+  const setGuitarra = () => {
+    setInstrumento(<Guitarra></Guitarra>)
+  }
+
+  const setPiano = () => {
+    setInstrumento(<Piano></Piano>)
+  }
+
+  const setFlauta = () => {
+    setInstrumento(<Flauta></Flauta>)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App container d-flex'>
+      <div className='Instrument-selector container d-flex' id='Instrument-selector'>
+        <button className='btn btn-secondary' onClick={setGuitarra}>Guitarra</button> 
+        <button className='btn btn-secondary' onClick={setPiano}>Piano</button>
+        <button className='btn btn-secondary' onClick={setFlauta}>Flauta</button>         
+      </div>
+      {instrumento}
     </div>
   );
 }
